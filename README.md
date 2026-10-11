@@ -2,7 +2,7 @@
 
 Personal portfolio of Ngô Quốc Long, a software developer working across full-stack web and Android.
 
-**Live site:** https://portfolio-plum-eta-fdu7kfa9hd.vercel.app/
+**Live site:** https://longngoportfolio.vercel.app/
 
 ![Screenshot of the portfolio home page](docs/screenshot.png)
 
