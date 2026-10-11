@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ngô Quốc Long — Portfolio
 
-## Getting Started
+Personal portfolio of Ngô Quốc Long, a software developer working across full-stack web and Android.
 
-First, run the development server:
+**Live site:** https://portfolio-plum-eta-fdu7kfa9hd.vercel.app/
+
+![Screenshot of the portfolio home page](docs/screenshot.png)
+
+## What's on it
+
+- **Projects** — Daily Reset (a published Android app), a social media content automation tool, a hotel booking system, and an e-commerce platform
+- **Skills** — backend, frontend, mobile, databases, cloud, and security tooling
+- **Journey** — work experience, education, and certifications
+- **Contact** — a form that delivers messages by email
+
+## Tech stack
+
+- [Next.js](https://nextjs.org) (App Router) and React, written in TypeScript
+- [Tailwind CSS](https://tailwindcss.com) for styling
+- [Web3Forms](https://web3forms.com) for the contact form
+- Deployed on [Vercel](https://vercel.com)
+
+## Running locally
+
+Requires Node.js 20 or later.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To have the contact form send messages, create a `.env.local` file with a Web3Forms access key:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+NEXT_PUBLIC_WEB3FORMS_KEY=your-access-key
+```
 
-## Learn More
+Without the key, the form opens the visitor's email app instead.
 
-To learn more about Next.js, take a look at the following resources:
+## Editing content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All text on the site (profile, projects, skills, experience) lives in [`src/data/site.ts`](src/data/site.ts). The page sections are components in [`src/components`](src/components).
