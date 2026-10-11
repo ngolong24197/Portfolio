@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #09110f;
+  --color-ink-deep: #08100e;
+  --color-ink-footer: #060c0a;
+  --color-panel: #0c1714;
+  --color-raised: #0e1a16;
+  --color-chip: #101f1b;
+  --color-chip-hi: #152822;
+  --color-line: #1a352c;
+  --color-line-strong: #27483d;
+  --color-on-accent: #042f24;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-jetbrains-mono);
+  --font-serif: var(--font-newsreader);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  background-color: var(--color-ink);
+}
+
+body {
+  background-color: var(--color-ink);
+  color: #ecfdf5;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ink);
+}
+::-webkit-scrollbar-thumb {
+  background: #1b352d;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+.bg-aura {
+  background-image: radial-gradient(
+    circle at 50% 0%,
+    rgba(16, 185, 129, 0.15) 0%,
+    rgba(9, 17, 15, 0) 70%
+  );
+}
+
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(52, 211, 153, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.emerald-glow {
+  box-shadow: 0 0 25px -4px rgba(16, 185, 129, 0.22);
+}
+
+.emerald-glow-sm {
+  box-shadow: 0 0 14px -2px rgba(16, 185, 129, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
