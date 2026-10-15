@@ -222,7 +222,7 @@ export default function Projects() {
 
             <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-line pt-6">
               {selected.links.map((link) =>
-                link.kind === "live" ? (
+                link.kind !== "source" ? (
                   <a
                     key={link.href}
                     href={link.href}

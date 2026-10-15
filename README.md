@@ -41,4 +41,4 @@ Without the key, the form opens the visitor's email app instead.
 
 ## Editing content
 
-All text on the site (profile, projects, skills, experience) lives in [`src/data/site.ts`](src/data/site.ts). The page sections are components in [`src/components`](src/components).
+Site text (profile, skills, experience) lives in [`src/data/site.ts`](src/data/site.ts). Projects and their categories live in [`src/data/projects.json`](src/data/projects.json), which Project Hub updates automatically when a project is published. The page sections are components in [`src/components`](src/components).
